@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ja Ellrach</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Header -->
+  <header class="text-center p-6 bg-white shadow">
+    <h1 class="text-4xl font-bold text-blue-700">Ja Ellrach</h1>
+    <p class="text-sm mt-2">Professional Academic Services at Your Fingertips</p>
+  </header>
+
+  <main class="p-6 space-y-10">
+    <!-- Request Form -->
+    <section class="bg-white p-6 rounded-xl shadow">
+      <h2 class="text-2xl font-bold mb-4 text-blue-600">Request Academic Work</h2>
+      <form action="https://formspree.io/f/your-form-id" method="POST" enctype="multipart/form-data" class="space-y-4">
+        <input type="text" name="name" placeholder="Your Name" required class="w-full p-2 border rounded" />
+        <input type="email" name="email" placeholder="Your Email" required class="w-full p-2 border rounded" />
+        <input type="text" name="subject" placeholder="Academic Subject or Topic" required class="w-full p-2 border rounded" />
+        <textarea name="instructions" placeholder="Detailed Instructions or Requirements" rows="4" required class="w-full p-2 border rounded"></textarea>
+        <input type="file" name="attachment" accept=".pdf,.doc,.docx,.jpg,.png" class="w-full p-2 border rounded" />
+        <button type="submit" class="w-full bg-blue-700 hover:bg-blue-800 text-white p-2 rounded">Submit Request</button>
+      </form>
+
+      <!-- Google Form backup -->
+      <p class="mt-4 text-sm text-gray-500">Having issues? Submit through our 
+        <a href="https://forms.gle/your-google-form" class="text-blue-600 underline">Google Form</a>.
+      </p>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="bg-white p-6 rounded-xl shadow">
+      <h2 class="text-2xl font-bold mb-4 text-blue-600">Why Choose Us?</h2>
+      <ul class="list-disc ml-5 text-gray-700 space-y-2">
+        <li>Custom thesis, research, essays, and assignments</li>
+        <li>Private and professional handling</li>
+        <li>Always on time</li>
+        <li>Supports multiple academic fields</li>
+        <li>Real-time updates and 24/7 support</li>
+      </ul>
+    </section>
+
+    <!-- Payment Section -->
+    <section class="bg-white p-6 rounded-xl shadow">
+      <h2 class="text-2xl font-bold mb-4 text-blue-600">Send Payment</h2>
+      <ul class="list-disc ml-5 text-gray-700">
+        <li><strong>GCash:</strong> 09XXXXXXXXX – Ja Ellrach</li>
+        <li><strong>PayPal:</strong> <a href="https://paypal.me/yourlink" class="text-blue-600 underline">paypal.me/yourlink</a></li>
+      </ul>
+    </section>
+
+    <!-- File Downloads -->
+    <section class="bg-white p-6 rounded-xl shadow">
+      <h2 class="text-2xl font-bold mb-4 text-blue-600">Download Completed Work</h2>
+      <ul class="space-y-2">
+        <li><a href="sample-thesis.pdf" download class="text-blue-700 underline">Sample Thesis.pdf</a></li>
+        <li><a href="template.docx" download class="text-blue-700 underline">Research Template.docx</a></li>
+      </ul>
+    </section>
+
+    <!-- Admin Link -->
+    <div class="text-center">
+      <a href="admin.html" class="text-sm text-blue-600 underline">Go to Admin Dashboard</a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center p-4 mt-10 text-sm text-gray-500">
+    &copy; <span id="year"></span> Ja Ellrach. All rights reserved.
+  </footer>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/639XXXXXXXXX" target="_blank" class="fixed bottom-4 right-4 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full shadow-lg">
+    Chat with us
+  </a>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
