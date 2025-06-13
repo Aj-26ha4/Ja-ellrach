@@ -2,85 +2,168 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ja Ellrach</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ja Ellrach – Academic Work Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'JetBrains Mono', monospace;
+      background-color: #000;
+      color: #fff;
+    }
+    header, footer {
+      text-align: center;
+      padding: 2rem;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: #fff;
+    }
+    header p {
+      color: #aaa;
+    }
+    .container {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .card {
+      background: #111;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 12px rgba(0, 255, 255, 0.1);
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: none;
+      border-radius: 0.5rem;
+      background: #222;
+      color: #fff;
+    }
+    input[type="file"] {
+      background: #111;
+    }
+    button {
+      background: #00f0ff;
+      color: #000;
+      padding: 0.75rem 2rem;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #00c0d6;
+    }
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .whatsapp-button:hover {
+      background-color: #1ebe5b;
+    }
+  </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body>
 
-  <!-- Header -->
-  <header class="text-center p-6 bg-white shadow">
-    <h1 class="text-4xl font-bold text-blue-700">Ja Ellrach</h1>
-    <p class="text-sm mt-2">Professional Academic Services at Your Fingertips</p>
+  <header>
+    <h1>Ja Ellrach</h1>
+    <p>“Empowering academic success with every submission.”</p>
   </header>
 
-  <main class="p-6 space-y-10">
-    <!-- Request Form -->
-    <section class="bg-white p-6 rounded-xl shadow">
-      <h2 class="text-2xl font-bold mb-4 text-blue-600">Request Academic Work</h2>
-      <form action="https://formspree.io/f/your-form-id" method="POST" enctype="multipart/form-data" class="space-y-4">
-        <input type="text" name="name" placeholder="Your Name" required class="w-full p-2 border rounded" />
-        <input type="email" name="email" placeholder="Your Email" required class="w-full p-2 border rounded" />
-        <input type="text" name="subject" placeholder="Academic Subject or Topic" required class="w-full p-2 border rounded" />
-        <textarea name="instructions" placeholder="Detailed Instructions or Requirements" rows="4" required class="w-full p-2 border rounded"></textarea>
-        <input type="file" name="attachment" accept=".pdf,.doc,.docx,.jpg,.png" class="w-full p-2 border rounded" />
-        <button type="submit" class="w-full bg-blue-700 hover:bg-blue-800 text-white p-2 rounded">Submit Request</button>
+  <main class="container">
+    <section class="card">
+      <h2>Request Academic Help</h2>
+      <form id="jaForm">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="text" name="subject" placeholder="Subject or Topic" required />
+        <textarea name="message" placeholder="Your instructions..." rows="5" required></textarea>
+        <input type="file" name="attachment" accept=".pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx,.txt,.zip,.rar" />
+        <button type="submit">Send Request</button>
       </form>
-
-      <!-- Google Form backup -->
-      <p class="mt-4 text-sm text-gray-500">Having issues? Submit through our 
-        <a href="https://forms.gle/your-google-form" class="text-blue-600 underline">Google Form</a>.
-      </p>
+      <p id="statusMsg"></p>
     </section>
 
-    <!-- Why Choose Us -->
-    <section class="bg-white p-6 rounded-xl shadow">
-      <h2 class="text-2xl font-bold mb-4 text-blue-600">Why Choose Us?</h2>
-      <ul class="list-disc ml-5 text-gray-700 space-y-2">
-        <li>Custom thesis, research, essays, and assignments</li>
-        <li>Private and professional handling</li>
-        <li>Always on time</li>
-        <li>Supports multiple academic fields</li>
-        <li>Real-time updates and 24/7 support</li>
+    <section class="card">
+      <h2>Why Choose Ja Ellrach?</h2>
+      <ul>
+        <li>All types of academic work – research, thesis, assignments</li>
+        <li>Confidential and deadline-focused services</li>
+        <li>Open communication with progress updates</li>
+        <li>Flexible across all levels and subjects</li>
       </ul>
     </section>
 
-    <!-- Payment Section -->
-    <section class="bg-white p-6 rounded-xl shadow">
-      <h2 class="text-2xl font-bold mb-4 text-blue-600">Send Payment</h2>
-      <ul class="list-disc ml-5 text-gray-700">
-        <li><strong>GCash:</strong> 09XXXXXXXXX – Ja Ellrach</li>
-        <li><strong>PayPal:</strong> <a href="https://paypal.me/yourlink" class="text-blue-600 underline">paypal.me/yourlink</a></li>
-      </ul>
+    <section class="card">
+      <h2>Secure Payments</h2>
+      <p>You will receive the payment details upon confirmation of the task. All transactions are secure and verified.</p>
     </section>
-
-    <!-- File Downloads -->
-    <section class="bg-white p-6 rounded-xl shadow">
-      <h2 class="text-2xl font-bold mb-4 text-blue-600">Download Completed Work</h2>
-      <ul class="space-y-2">
-        <li><a href="sample-thesis.pdf" download class="text-blue-700 underline">Sample Thesis.pdf</a></li>
-        <li><a href="template.docx" download class="text-blue-700 underline">Research Template.docx</a></li>
-      </ul>
-    </section>
-
-    <!-- Admin Link -->
-    <div class="text-center">
-      <a href="admin.html" class="text-sm text-blue-600 underline">Go to Admin Dashboard</a>
-    </div>
   </main>
 
-  <!-- Footer -->
-  <footer class="text-center p-4 mt-10 text-sm text-gray-500">
+  <a href="https://wa.me/639273783271" class="whatsapp-button" target="_blank">Chat on WhatsApp</a>
+
+  <footer>
     &copy; <span id="year"></span> Ja Ellrach. All rights reserved.
   </footer>
 
-  <!-- WhatsApp Button -->
-  <a href="https://wa.me/639XXXXXXXXX" target="_blank" class="fixed bottom-4 right-4 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full shadow-lg">
-    Chat with us
-  </a>
-
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Hidden Admin shortcut (Ctrl + Shift + A)
+    document.addEventListener("keydown", function (e) {
+      if (e.ctrlKey && e.shiftKey && e.key === 'A') {
+        window.location.href = "hiddenpanel_ellrach2025.html";
+      }
+    });
+
+    // Google Apps Script form submission
+    const scriptURL = "https://script.google.com/macros/s/AKfycbzFbPVadYX5_BjAIXad8lIZFKhEotoQN5bILTth8n0RJY9pHW8D8WSJHyt3rEpFdHkEoQ/exec";
+
+    document.getElementById("jaForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const form = e.target;
+      const file = form.attachment.files[0];
+
+      if (file) {
+        document.getElementById("statusMsg").textContent = "❌ File uploads must be sent manually to email or WhatsApp.";
+        return;
+      }
+
+      const data = {
+        name: form.name.value,
+        email: form.email.value,
+        subject: form.subject.value,
+        message: form.message.value
+      };
+
+      fetch(scriptURL, {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: { "Content-Type": "application/json" }
+      })
+      .then(res => res.text())
+      .then(msg => {
+        document.getElementById("statusMsg").textContent = "✅ Sent successfully!";
+        form.reset();
+      })
+      .catch(() => {
+        document.getElementById("statusMsg").textContent = "❌ Something went wrong.";
+      });
+    });
   </script>
+
 </body>
 </html>
