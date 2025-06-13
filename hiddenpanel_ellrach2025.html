@@ -1,0 +1,142 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Panel – Ja Ellrach</title>
+  <style>
+    body {
+      background: #000;
+      color: #fff;
+      font-family: 'JetBrains Mono', monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .login, .admin-content {
+      background: #111;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 12px rgba(0, 255, 255, 0.1);
+      width: 90%;
+      max-width: 400px;
+    }
+    input {
+      width: 100%;
+      padding: 0.75rem;
+      margin-top: 1rem;
+      border: none;
+      border-radius: 0.5rem;
+      background: #222;
+      color: #fff;
+    }
+    button {
+      background: #00f0ff;
+      color: #000;
+      padding: 0.75rem;
+      margin-top: 1rem;
+      border: none;
+      border-radius: 0.5rem;
+      width: 100%;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #00c0d6;
+    }
+    .admin-content {
+      display: none;
+    }
+    .submissions {
+      background: #000;
+      border-top: 1px solid #333;
+      margin-top: 1rem;
+      padding-top: 1rem;
+    }
+    .submissions h3 {
+      margin-top: 0;
+    }
+    .submission {
+      background: #111;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 0.5rem;
+    }
+    .download-btn {
+      background: #fff;
+      color: #000;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 0.3rem;
+      cursor: pointer;
+      margin-top: 0.5rem;
+    }
+    .download-btn:hover {
+      background: #ccc;
+    }
+  </style>
+</head>
+<body>  <div class="login">
+    <h2>Admin Login</h2>
+    <input type="password" id="adminPass" placeholder="Enter admin password" />
+    <button onclick="verify()">Access</button>
+    <p id="error" style="color: red;"></p>
+  </div>  <div class="admin-content" id="adminPanel">
+    <h2>Welcome, Admin</h2>
+    <p>Manage real-time submissions and uploaded files.</p><div class="submissions" id="submissionList">
+  <h3>Client Submissions</h3>
+  <div class="submission">
+    <p><strong>Name:</strong> Juan Dela Cruz</p>
+    <p><strong>Email:</strong> juan@email.com</p>
+    <p><strong>Subject:</strong> Thesis Help</p>
+    <p><strong>Message:</strong> Need help with my chapter 2.</p>
+    <a href="/files/sample-thesis.pdf" class="download-btn" download>Download File</a>
+  </div>
+  <div class="submission">
+    <p><strong>Name:</strong> Maria Santos</p>
+    <p><strong>Email:</strong> maria@email.com</p>
+    <p><strong>Subject:</strong> Research Editing</p>
+    <p><strong>Message:</strong> Please edit and proofread this file.</p>
+    <a href="/files/research-edit.docx" class="download-btn" download>Download File</a>
+  </div>
+</div>
+
+  </div>  <script>
+    const correctPassword = "Ellrach2025";
+
+    function verify() {
+      const input = document.getElementById("adminPass").value;
+      const error = document.getElementById("error");
+      const login = document.querySelector(".login");
+      const panel = document.getElementById("adminPanel");
+
+      if (input === correctPassword) {
+        login.style.display = "none";
+        panel.style.display = "block";
+        fetchGoogleSheet();
+      } else {
+        error.textContent = "❌ Incorrect password.";
+      }
+    }
+
+    function fetchGoogleSheet() {
+      fetch("https://script.google.com/macros/s/AKfycbzFbPVadYX5_BjAIXad8lIZFKhEotoQN5bILTth8n0RJY9pHW8D8WSJHyt3rEpFdHkEoQ/exec")
+        .then(res => res.json())
+        .then(data => {
+          const list = document.getElementById("submissionList");
+          data.forEach(entry => {
+            const div = document.createElement("div");
+            div.className = "submission";
+            div.innerHTML = `
+              <p><strong>Name:</strong> ${entry.name}</p>
+              <p><strong>Email:</strong> ${entry.email}</p>
+              <p><strong>Subject:</strong> ${entry.subject}</p>
+              <p><strong>Message:</strong> ${entry.message}</p>
+            `;
+            list.appendChild(div);
+          });
+        });
+    }
+  </script></body>
+</html>
