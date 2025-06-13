@@ -1,142 +1,142 @@
 <!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Admin Panel – Ja Ellrach</title>
+  <title>Secure Admin Panel – Ja Ellrach</title>
   <style>
     body {
+      font-family: 'JetBrains Mono', monospace;
       background: #000;
       color: #fff;
-      font-family: 'JetBrains Mono', monospace;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
       margin: 0;
-    }
-    .login, .admin-content {
-      background: #111;
       padding: 2rem;
-      border-radius: 1rem;
-      box-shadow: 0 0 12px rgba(0, 255, 255, 0.1);
-      width: 90%;
-      max-width: 400px;
     }
-    input {
+    table {
       width: 100%;
-      padding: 0.75rem;
-      margin-top: 1rem;
-      border: none;
-      border-radius: 0.5rem;
-      background: #222;
-      color: #fff;
+      border-collapse: collapse;
+      margin-top: 2rem;
     }
-    button {
+    th, td {
+      border: 1px solid #444;
+      padding: 0.5rem;
+      text-align: left;
+    }
+    th {
+      background: #111;
+    }
+    select, button {
+      padding: 0.3rem 0.6rem;
       background: #00f0ff;
-      color: #000;
-      padding: 0.75rem;
-      margin-top: 1rem;
       border: none;
-      border-radius: 0.5rem;
-      width: 100%;
+      border-radius: 4px;
       cursor: pointer;
+      color: #000;
+      font-weight: bold;
     }
     button:hover {
       background: #00c0d6;
     }
-    .admin-content {
-      display: none;
-    }
-    .submissions {
-      background: #000;
-      border-top: 1px solid #333;
-      margin-top: 1rem;
-      padding-top: 1rem;
-    }
-    .submissions h3 {
-      margin-top: 0;
-    }
-    .submission {
+    #loginBox {
+      display: flex;
+      flex-direction: column;
+      max-width: 300px;
+      margin: 5rem auto;
       background: #111;
-      padding: 1rem;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 15px rgba(0,255,255,0.2);
+    }
+    #loginBox input {
       margin-bottom: 1rem;
-      border-radius: 0.5rem;
-    }
-    .download-btn {
-      background: #fff;
-      color: #000;
+      padding: 0.6rem;
       border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 0.3rem;
-      cursor: pointer;
-      margin-top: 0.5rem;
-    }
-    .download-btn:hover {
-      background: #ccc;
+      border-radius: 5px;
+      background: #222;
+      color: #fff;
     }
   </style>
 </head>
-<body>  <div class="login">
+<body>
+  <div id="loginBox">
     <h2>Admin Login</h2>
-    <input type="password" id="adminPass" placeholder="Enter admin password" />
-    <button onclick="verify()">Access</button>
-    <p id="error" style="color: red;"></p>
-  </div>  <div class="admin-content" id="adminPanel">
-    <h2>Welcome, Admin</h2>
-    <p>Manage real-time submissions and uploaded files.</p><div class="submissions" id="submissionList">
-  <h3>Client Submissions</h3>
-  <div class="submission">
-    <p><strong>Name:</strong> Juan Dela Cruz</p>
-    <p><strong>Email:</strong> juan@email.com</p>
-    <p><strong>Subject:</strong> Thesis Help</p>
-    <p><strong>Message:</strong> Need help with my chapter 2.</p>
-    <a href="/files/sample-thesis.pdf" class="download-btn" download>Download File</a>
-  </div>
-  <div class="submission">
-    <p><strong>Name:</strong> Maria Santos</p>
-    <p><strong>Email:</strong> maria@email.com</p>
-    <p><strong>Subject:</strong> Research Editing</p>
-    <p><strong>Message:</strong> Please edit and proofread this file.</p>
-    <a href="/files/research-edit.docx" class="download-btn" download>Download File</a>
-  </div>
-</div>
-
+    <input type="password" id="adminPass" placeholder="Enter Password" />
+    <button onclick="checkLogin()">Access</button>
+    <p id="loginError" style="color: red;"></p>
+  </div>  <div id="adminPanel" style="display:none;">
+    <h1>📁 Admin Panel – Academic Requests</h1>
+    <table id="dataTable">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Timestamp</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Subject</th>
+          <th>Message</th>
+          <th>File</th>
+          <th>Status</th>
+          <th>Update</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
   </div>  <script>
-    const correctPassword = "Ellrach2025";
+    const adminPassword = "EllrachSecure0927"; // Change this password
 
-    function verify() {
-      const input = document.getElementById("adminPass").value;
-      const error = document.getElementById("error");
-      const login = document.querySelector(".login");
-      const panel = document.getElementById("adminPanel");
-
-      if (input === correctPassword) {
-        login.style.display = "none";
-        panel.style.display = "block";
-        fetchGoogleSheet();
+    function checkLogin() {
+      const entered = document.getElementById("adminPass").value;
+      if (entered === adminPassword) {
+        document.getElementById("loginBox").style.display = "none";
+        document.getElementById("adminPanel").style.display = "block";
+        loadData();
       } else {
-        error.textContent = "❌ Incorrect password.";
+        document.getElementById("loginError").textContent = "❌ Incorrect password.";
       }
     }
 
-    function fetchGoogleSheet() {
-      fetch("https://script.google.com/macros/s/AKfycbzFbPVadYX5_BjAIXad8lIZFKhEotoQN5bILTth8n0RJY9pHW8D8WSJHyt3rEpFdHkEoQ/exec")
+    function loadData() {
+      const scriptURL = "https://script.google.com/macros/s/AKfycbz7FLgr-4DZxtVOvf2kW4bpZMhpyu63YCVZnRlQtsXSXtK_KyvY_0na_q7RYSoYJH3MQA/exec";
+      fetch(scriptURL)
         .then(res => res.json())
         .then(data => {
-          const list = document.getElementById("submissionList");
-          data.forEach(entry => {
-            const div = document.createElement("div");
-            div.className = "submission";
-            div.innerHTML = `
-              <p><strong>Name:</strong> ${entry.name}</p>
-              <p><strong>Email:</strong> ${entry.email}</p>
-              <p><strong>Subject:</strong> ${entry.subject}</p>
-              <p><strong>Message:</strong> ${entry.message}</p>
+          const tbody = document.querySelector("#dataTable tbody");
+          tbody.innerHTML = "";
+          data.forEach((entry, index) => {
+            const tr = document.createElement("tr");
+            tr.innerHTML = `
+              <td>${index + 1}</td>
+              <td>${entry.Timestamp || ''}</td>
+              <td>${entry.Name || ''}</td>
+              <td>${entry.Email || ''}</td>
+              <td>${entry.Subject || ''}</td>
+              <td>${entry.Message || ''}</td>
+              <td>${entry["File URL"] ? `<a href="${entry["File URL"]}" target="_blank">Open</a>` : "No file"}</td>
+              <td>
+                <select id="status-${entry.rowIndex}">
+                  <option value="Pending" ${entry.Status === "Pending" ? "selected" : ""}>Pending</option>
+                  <option value="In Progress" ${entry.Status === "In Progress" ? "selected" : ""}>In Progress</option>
+                  <option value="Done" ${entry.Status === "Done" ? "selected" : ""}>Done</option>
+                  <option value="Rejected" ${entry.Status === "Rejected" ? "selected" : ""}>Rejected</option>
+                </select>
+              </td>
+              <td><button onclick="updateStatus(${entry.rowIndex})">Update</button></td>
             `;
-            list.appendChild(div);
+            tbody.appendChild(tr);
           });
         });
+    }
+
+    function updateStatus(rowIndex) {
+      const newStatus = document.getElementById(`status-${rowIndex}`).value;
+      const scriptURL = "https://script.google.com/macros/s/AKfycbz7FLgr-4DZxtVOvf2kW4bpZMhpyu63YCVZnRlQtsXSXtK_KyvY_0na_q7RYSoYJH3MQA/exec";
+
+      fetch(scriptURL, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ rowIndex, status: newStatus })
+      })
+      .then(res => res.text())
+      .then(msg => alert("✅ Status updated."))
+      .catch(() => alert("❌ Failed to update status."));
     }
   </script></body>
 </html>
