@@ -1,8 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ja Ellrach – Academic Work Services</title>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
   <style>
@@ -76,12 +75,10 @@
   </style>
 </head>
 <body>
-
   <header>
     <h1>Ja Ellrach</h1>
     <p>“Empowering academic success with every submission.”</p>
   </header>
-
   <main class="container">
     <section class="card">
       <h2>Request Academic Help</h2>
@@ -94,42 +91,30 @@
         <button type="submit">Send Request</button>
       </form>
       <p id="statusMsg"></p>
-    </section>
+    </section><section class="card">
+  <h2>Why Choose Ja Ellrach?</h2>
+  <ul>
+    <li>All types of academic work – research, thesis, assignments</li>
+    <li>Confidential and deadline-focused services</li>
+    <li>Open communication with progress updates</li>
+    <li>Flexible across all levels and subjects</li>
+  </ul>
+</section>
 
-    <section class="card">
-      <h2>Why Choose Ja Ellrach?</h2>
-      <ul>
-        <li>All types of academic work – research, thesis, assignments</li>
-        <li>Confidential and deadline-focused services</li>
-        <li>Open communication with progress updates</li>
-        <li>Flexible across all levels and subjects</li>
-      </ul>
-    </section>
+<section class="card">
+  <h2>Secure Payments</h2>
+  <p>You will receive the payment details upon confirmation of the task. All transactions are secure and verified.</p>
+</section>
 
-    <section class="card">
-      <h2>Secure Payments</h2>
-      <p>You will receive the payment details upon confirmation of the task. All transactions are secure and verified.</p>
-    </section>
-  </main>
-
-  <a href="https://wa.me/639273783271" class="whatsapp-button" target="_blank">Chat on WhatsApp</a>
+  </main><a href="https://wa.me/639273783271" class="whatsapp-button" target="_blank">Chat on WhatsApp</a>
 
   <footer>
     &copy; <span id="year"></span> Ja Ellrach. All rights reserved.
-  </footer>
-
-  <script>
+  </footer>  <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Hidden Admin shortcut (Ctrl + Shift + A)
-    document.addEventListener("keydown", function (e) {
-      if (e.ctrlKey && e.shiftKey && e.key === 'A') {
-        window.location.href = "hiddenpanel_ellrach2025.html";
-      }
-    });
-
-    // Google Apps Script form submission
-    const scriptURL = "https://script.google.com/macros/s/AKfycbzFbPVadYX5_BjAIXad8lIZFKhEotoQN5bILTth8n0RJY9pHW8D8WSJHyt3rEpFdHkEoQ/exec";
+    // Submit form
+    const scriptURL = "https://script.google.com/macros/s/AKfycbz7FLgr-4DZxtVOvf2kW4bpZMhpyu63YCVZnRlQtsXSXtK_KyvY_0na_q7RYSoYJH3MQA/exec";
 
     document.getElementById("jaForm").addEventListener("submit", function (e) {
       e.preventDefault();
@@ -163,7 +148,12 @@
         document.getElementById("statusMsg").textContent = "❌ Something went wrong.";
       });
     });
-  </script>
 
-</body>
+    // Secret keyboard combo (Ctrl+Shift+A)
+    document.addEventListener("keydown", function (e) {
+      if (e.ctrlKey && e.shiftKey && e.key === 'A') {
+        window.location.href = "adminpanel_secure_hidden.html";
+      }
+    });
+  </script></body>
 </html>
