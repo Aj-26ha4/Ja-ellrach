@@ -1,21 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Admin - Ja Ellrach</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Dashboard – Ja Ellrach</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-top: 50px;
+      border-radius: 10px;
+    }
+    h1 {
+      color: #1a73e8;
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+    .section h2 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+    .logout {
+      color: red;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  </style>
 </head>
-<body class="bg-gray-100 p-6">
-  <h1 class="text-2xl font-bold text-blue-700 mb-4">Admin Dashboard</h1>
-  <p class="mb-4 text-gray-700">Use this space to manage submissions and files.</p>
+<body>
 
-  <label class="block mb-2 text-sm font-medium">Upload File (for download section):</label>
-  <input type="file" class="mb-4 p-2 border rounded w-full" />
+  <div class="container">
+    <h1>Welcome, Admin</h1>
+    
+    <div class="section">
+      <h2>📂 Uploaded Files</h2>
+      <ul>
+        <li><a href="Sample Thesis.pdf" download>Sample Thesis.pdf</a></li>
+        <li><a href="Research Template.docx" download>Research Template.docx</a></li>
+      </ul>
+    </div>
 
-  <button class="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800">Simulate Upload</button>
+    <div class="section">
+      <h2>🧾 Payments</h2>
+      <p><strong>GCash:</strong> 09XXXXXXXXXX – Ja Ellrach</p>
+      <p><strong>PayPal:</strong> <a href="https://paypal.me/yourlink" target="_blank">paypal.me/yourlink</a></p>
+    </div>
 
-  <div class="mt-6">
-    <a href="https://formspree.io" target="_blank" class="text-blue-600 underline">Check Formspree submissions</a>
+    <div class="section">
+      <h2>📥 Form Submissions (Coming Soon)</h2>
+      <p>No data yet.</p>
+    </div>
+
+    <a href="index.html" class="logout">← Back to Homepage</a>
   </div>
+
 </body>
 </html>
