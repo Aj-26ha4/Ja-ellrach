@@ -1,115 +1,77 @@
-# 📚 Ellrach Academic Hub
+📚 Ellrach Academic Hub
 
-**Ellrach Academic Hub** is an academic commission platform based in the Philippines that provides reliable, affordable, and high-quality academic assistance. We serve students, researchers, and professionals with personalized support for thesis writing, essays, research papers, and more — delivered securely via email and Messenger.
+Ellrach Academic Hub is an academic commission platform based in the Philippines that provides reliable, affordable, and high-quality academic assistance. We serve students, researchers, and professionals with personalized support for thesis writing, essays, research papers, and more — delivered securely via email and Messenger.
 
 ---
 
-# 🌟 About Us
+🌟 About Us
 
 We are committed to making academic success achievable through a fast, confidential, and professional approach. Whether it's for school, university, or professional growth, Ellrach Academic Hub is here to help you submit your best work.
 
 ---
 
-# 🛠 Key Features
+🛠 Key Features
 
-- 🎓 Academic Services  
-  - Thesis and Capstone Writing  
-  - Research Papers  
-  - School Essays and Reports  
-  - Data Analysis & Interpretation
+🎓 Academic Services
 
-- 💬 Easy Inquiries  
-  - Floating contact button with access to:  
-    - WhatsApp  
-    - Messenger  
-    - Email  
-    - Phone
+Thesis and Capstone Writing
 
-- 📥 Google Form Submission  
-  - Clients submit service requests through a secure form.
+Research Papers
 
-- 💳 Payment Form  
-  - Each service includes its own secured payment process.
+School Essays and Reports
 
-- 📤 File Delivery via  
-  - ✅ Email: ajsogood@gmail.com  
-  - ✅ Messenger: m.me/ellrachhub
+Data Analysis & Interpretation
 
----
 
-# 🚀 Deployment
+💬 Easy Inquiries
 
-- Built with HTML, CSS, and JavaScript  
-- Developed using SPCK Editor (mobile-compatible)  
-- Deployed via Vercel for fast access
+Floating contact button with access to:
 
----
+WhatsApp
 
-# 📂 Project Structure
+Messenger
 
-```plaintext
-ellrach-academic-hub/
-├── index.html     # Main website page (landing and services)
-├── style.css      # Custom dark-themed styles (white-on-black)
-├── script.js      # JavaScript for floating buttons, popups, and interactivity
-└── README.md      # Project documentation and usage guide
+Email
 
----
+Phone
 
-# 📚 Ellrach Academic Hub
 
-**Ellrach Academic Hub** is an academic commission platform based in the Philippines that provides reliable, affordable, and high-quality academic assistance. We serve students, researchers, and professionals with personalized support for thesis writing, essays, research papers, and more — delivered securely via email and Messenger.
+
+📥 Google Form Submission
+
+Clients submit service requests through a secure form.
+
+
+💳 Payment Form
+
+Each service includes its own secured payment process.
+
+
+📤 File Delivery via
+
+✅ Email: ajsogood@gmail.com
+
+✅ Messenger: m.me/ellrachhub
 
 ---
 
-# 🌟 About Us
+🚀 Deployment
 
-We are committed to making academic success achievable through a fast, confidential, and professional approach. Whether it's for school, university, or professional growth, Ellrach Academic Hub is here to help you submit your best work.
+Built with HTML, CSS, and JavaScript
 
----
+Developed using SPCK Editor (mobile-compatible)
 
-# 🛠 Key Features
-
-- 🎓 Academic Services  
-  - Thesis and Capstone Writing  
-  - Research Papers  
-  - School Essays and Reports  
-  - Data Analysis & Interpretation
-
-- 💬 Easy Inquiries  
-  - Floating contact button with access to:  
-    - WhatsApp  
-    - Messenger  
-    - Email  
-    - Phone
-
-- 📥 Google Form Submission  
-  - Clients submit service requests through a secure form.
-
-- 💳 Payment Form  
-  - Each service includes its own secured payment process.
-
-- 📤 File Delivery via  
-  - ✅ Email: ajsogood@gmail.com  
-  - ✅ Messenger: m.me/ellrachhub
+Deployed via Vercel for fast access
 
 ---
 
-# 🚀 Deployment
-
-- Built with HTML, CSS, and JavaScript  
-- Developed using SPCK Editor (mobile-compatible)  
-- Deployed via Vercel for fast access
-
----
-
-# 📂 Project Structure
+📂 Project Structure
 
 ellrach-academic-hub/
-├── index.html     # Main website page (landing and services)
-├── style.css      # Custom dark-themed styles (white-on-black)
-├── script.js      # JavaScript for floating buttons, popups, and interactivity
-└── README.md      # Project documentation and usage guide
+├── index.html     # Main website page (landing and services)
+├── style.css      # Custom dark-themed styles (white-on-black)
+├── script.js      # JavaScript for floating buttons, popups, and interactivity
+└── README.md      # Project documentation and usage guide
 
 ---
 
@@ -137,7 +99,7 @@ Email: ajsogood@gmail.com
 
 WhatsApp: 0927-378-3271
 
-Messenger: m.me/ellrach
+Messenger: m.me/ellrachhub
 
 Facebook Page: facebook.com/ellrach
 
