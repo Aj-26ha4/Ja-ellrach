@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,163 +16,163 @@
       --button-bg: #007acc;
       --button-text: #fff;
       --shadow-color: rgba(0, 0, 0, 0.1);
-    }body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  background: var(--bg-gradient);
-  color: var(--text-color);
-  transition: background 0.5s ease;
-}
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: var(--bg-gradient);
+      color: var(--text-color);
+      transition: background 0.5s ease;
+    }
 
-.banner {
-  background: url('https://source.unsplash.com/1600x400/?study,books,education') no-repeat center center/cover;
-  height: 250px;
-  border-bottom: 5px solid var(--primary-color);
-  animation: fadeIn 2s ease-in-out;
-}
+    .banner {
+      background: url('https://source.unsplash.com/1600x400/?study,books,education') no-repeat center center/cover;
+      height: 250px;
+      border-bottom: 5px solid var(--primary-color);
+      animation: fadeIn 2s ease-in-out;
+    }
 
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
 
-header {
-  background: var(--accent-color);
-  text-align: center;
-  padding: 2rem 1rem;
-  animation: slideDown 1s ease-out;
-}
+    header {
+      background: var(--accent-color);
+      text-align: center;
+      padding: 2rem 1rem;
+      animation: slideDown 1s ease-out;
+    }
 
-@keyframes slideDown {
-  from { transform: translateY(-20px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
+    @keyframes slideDown {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
 
-header h1 {
-  color: var(--primary-color);
-  margin: 0;
-  font-size: 2.5rem;
-}
+    header h1 {
+      color: var(--primary-color);
+      margin: 0;
+      font-size: 2.5rem;
+    }
 
-header p {
-  font-style: italic;
-  margin-top: 0.5rem;
-}
+    header p {
+      font-style: italic;
+      margin-top: 0.5rem;
+    }
 
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 2rem;
-}
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+    }
 
-.card {
-  background: var(--card-bg);
-  padding: 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 8px 24px var(--shadow-color);
-  margin-bottom: 2rem;
-  backdrop-filter: blur(3px);
-  transition: transform 0.3s ease;
-}
+    .card {
+      background: var(--card-bg);
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 8px 24px var(--shadow-color);
+      margin-bottom: 2rem;
+      backdrop-filter: blur(3px);
+      transition: transform 0.3s ease;
+    }
 
-.card:hover {
-  transform: translateY(-5px);
-}
+    .card:hover {
+      transform: translateY(-5px);
+    }
 
-button {
-  background: var(--button-bg);
-  color: var(--button-text);
-  padding: 0.75rem 2rem;
-  border: none;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  font-weight: 600;
-  transition: background 0.3s ease;
-}
+    button {
+      background: var(--button-bg);
+      color: var(--button-text);
+      padding: 0.75rem 2rem;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
 
-button:hover {
-  background: #005fa3;
-}
+    button:hover {
+      background: #005fa3;
+    }
 
-.services-list li {
-  cursor: pointer;
-  color: var(--primary-color);
-  text-decoration: underline;
-  margin-bottom: 0.5rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
+    .services-list li {
+      cursor: pointer;
+      color: var(--primary-color);
+      text-decoration: underline;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
 
-.services-list li i {
-  color: var(--primary-color);
-}
+    .services-list li i {
+      color: var(--primary-color);
+    }
 
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 10;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.7);
-  animation: fadeIn 0.3s ease;
-}
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.7);
+      animation: fadeIn 0.3s ease;
+    }
 
-.modal-content {
-  background-color: white;
-  margin: 10% auto;
-  padding: 20px;
-  border-radius: 1rem;
-  max-width: 600px;
-}
+    .modal-content {
+      background-color: white;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 1rem;
+      max-width: 600px;
+    }
 
-.close {
-  float: right;
-  font-size: 1.5rem;
-  font-weight: bold;
-  cursor: pointer;
-}
+    .close {
+      float: right;
+      font-size: 1.5rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
 
-footer {
-  text-align: center;
-  padding: 2rem;
-  background: var(--accent-color);
-}
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: var(--accent-color);
+    }
 
-.whatsapp-button, .faq-button, .email-button {
-  position: fixed;
-  bottom: 20px;
-  padding: 12px 16px;
-  border-radius: 50%;
-  text-align: center;
-  text-decoration: none;
-  font-size: 20px;
-  font-weight: bold;
-  z-index: 99;
-}
+    .whatsapp-button, .faq-button, .email-button {
+      position: fixed;
+      bottom: 20px;
+      padding: 12px 16px;
+      border-radius: 50%;
+      text-align: center;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: bold;
+      z-index: 99;
+    }
 
-.whatsapp-button {
-  right: 20px;
-  background-color: #25D366;
-  color: white;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-}
+    .whatsapp-button {
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
 
-.faq-button {
-  right: 80px;
-  background-color: #ffc107;
-  color: white;
-}
+    .faq-button {
+      right: 80px;
+      background-color: #ffc107;
+      color: white;
+    }
 
-.email-button {
-  right: 140px;
-  background-color: #d44638;
-  color: white;
-}
-
+    .email-button {
+      right: 140px;
+      background-color: #d44638;
+      color: white;
+    }
   </style>
 </head>
 <body>
@@ -180,6 +181,7 @@ footer {
     <h1>Ellrach Academic Hub</h1>
     <p>“Your Partner in Achieving Academic Excellence.”</p>
   </header>
+
   <main class="container">
     <section class="card">
       <h2>Our Services</h2>
@@ -189,58 +191,37 @@ footer {
         <li onclick="openModal('data')"><i class="fas fa-chart-bar"></i> Data Analysis</li>
         <li onclick="openModal('assignments')"><i class="fas fa-pen-nib"></i> Essays, Assignments & More</li>
       </ul>
-    </section><section class="card">
-  <h2>Submit Your Request</h2>
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLScDTboapS6CTY6gIbXBBhF4RRIuQV3l-o3fmSrwniI3BBHMEg/viewform?usp=sharing" target="_blank">
-    <button><i class="fas fa-paper-plane"></i> Submit a Request</button>
-  </a>
-  <p style="margin-top:1rem">
-    <input type="checkbox" id="agreeTerms">
-    <label for="agreeTerms">I agree to the <a href="#" onclick="openModal('policy')">payment policy</a>.</label>
-  </p>
-</section>
+    </section>
 
-  </main>  <a href="https://wa.me/639273783271" class="whatsapp-button" target="_blank" title="Chat on WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-  <a href="#" class="faq-button" onclick="alert('For help or FAQs, please send us a message via WhatsApp or email.')" title="FAQ / Help">
-    <i class="fas fa-question"></i>
-  </a>
-  <a href="mailto:ajsogood@gmail.com" class="email-button" title="Email Us">
-    <i class="fas fa-envelope"></i>
-  </a>  <footer>
+    <section class="card">
+      <h2>Submit Your Request</h2>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScDTboapS6CTY6gIbXBBhF4RRIuQV3l-o3fmSrwniI3BBHMEg/viewform?usp=sharing" target="_blank">
+        <button><i class="fas fa-paper-plane"></i> Submit a Request</button>
+      </a>
+      <p style="margin-top:1rem">
+        <input type="checkbox" id="agreeTerms">
+        <label for="agreeTerms">I agree to the <a href="#" onclick="openModal('policy')">payment policy</a>.</label>
+      </p>
+    </section>
+  </main>
+
+  <a href="https://wa.me/639273783271" class="whatsapp-button" target="_blank" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  <a href="#" class="faq-button" onclick="alert('For help or FAQs, please send us a message via WhatsApp or email.')" title="FAQ / Help"><i class="fas fa-question"></i></a>
+  <a href="mailto:ellrachacademic@gmail.com" class="email-button" title="Email Us"><i class="fas fa-envelope"></i></a>
+
+  <footer>
     &copy; <span id="year"></span> Ellrach Academic Hub. All rights reserved.
-  </footer>  <div id="research" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('research')">&times;</span>
-      <h3>Research Papers & Literature Reviews</h3>
-      <p>We help you find credible, peer-reviewed sources and write cohesive, critical literature reviews with proper citation styles (APA, MLA, Chicago, etc.).</p>
-    </div>
-  </div>  <div id="thesis" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('thesis')">&times;</span>
-      <h3>Thesis Writing & Editing</h3>
-      <p>From proposal to final defense, we offer full or partial thesis writing, editing, formatting, and plagiarism checks.</p>
-    </div>
-  </div>  <div id="data" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('data')">&times;</span>
-      <h3>Data Analysis</h3>
-      <p>Statistical or thematic analysis using SPSS, Excel, or manual coding. Graphs, tables, and interpretations included.</p>
-    </div>
-  </div>  <div id="assignments" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('assignments')">&times;</span>
-      <h3>Essays, Assignments & More</h3>
-      <p>We cover short papers, reflection essays, lab reports, or case studies with high quality and fast turnaround.</p>
-    </div>
-  </div>  <div id="policy" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('policy')">&times;</span>
-      <h3>Payment Policy</h3>
-      <p>Payment details will be provided only after your request is confirmed. Full payment is required before final output is released. Partial payments may be arranged for large-scale projects.</p>
-    </div>
-  </div>  <script>
+  </footer>
+
+  <!-- Modals -->
+  <div id="research" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('research')">&times;</span><h3>Research Papers & Literature Reviews</h3><p>We help you find credible, peer-reviewed sources and write cohesive, critical literature reviews with proper citation styles (APA, MLA, Chicago, etc.).</p></div></div>
+  <div id="thesis" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('thesis')">&times;</span><h3>Thesis Writing & Editing</h3><p>From proposal to final defense, we offer full or partial thesis writing, editing, formatting, and plagiarism checks.</p></div></div>
+  <div id="data" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('data')">&times;</span><h3>Data Analysis</h3><p>Statistical or thematic analysis using SPSS, Excel, or manual coding. Graphs, tables, and interpretations included.</p></div></div>
+  <div id="assignments" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('assignments')">&times;</span><h3>Essays, Assignments & More</h3><p>We cover short papers, reflection essays, lab reports, or case studies with high quality and fast turnaround.</p></div></div>
+  <div id="policy" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('policy')">&times;</span><h3>Payment Policy</h3><p>Payment details will be provided only after your request is confirmed. Full payment is required before final output is released. Partial payments may be arranged for large-scale projects.</p></div></div>
+
+  <!-- Year Script -->
+  <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
     function openModal(id) {
@@ -259,5 +240,34 @@ footer {
         }
       });
     }
-  </script></body>
+  </script>
+
+  <!-- Messenger Chat Plugin Code -->
+  <div id="fb-root"></div>
+  <div id="fb-customer-chat" class="fb-customerchat"></div>
+
+  <script>
+    var chatbox = document.getElementById('fb-customer-chat');
+    chatbox.setAttribute("page_id", "721413787715476");
+    chatbox.setAttribute("attribution", "biz_inbox");
+  </script>
+
+  <script>
+    window.fbAsyncInit = function () {
+      FB.init({
+        xfbml: true,
+        version: 'v19.0'
+      });
+    };
+
+    (function (d, s, id) {
+      if (d.getElementById(id)) return;
+      var js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+      var fjs = d.getElementsByTagName(s)[0];
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+</body>
 </html>
