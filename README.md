@@ -54,9 +54,6 @@ ellrach-academic-hub/
 ├── script.js      # JavaScript for floating buttons, popups, and interactivity
 └── README.md      # Project documentation and usage guide
 
-
-
-
 ---
 
 # 📚 Ellrach Academic Hub
@@ -115,7 +112,6 @@ ellrach-academic-hub/
 ├── script.js      # JavaScript for floating buttons, popups, and interactivity
 └── README.md      # Project documentation and usage guide
 
-
 ---
 
 💡 How It Works
@@ -142,9 +138,9 @@ Email: ajsogood@gmail.com
 
 WhatsApp: 0927-378-3271
 
-Messenger: m.me/ellrachhub
+Messenger: m.me/ellrach
 
-Facebook Page: facebook.com/ellrachhub
+Facebook Page: facebook.com/ellrach
 
 Phone: 0927-378-3271
 
