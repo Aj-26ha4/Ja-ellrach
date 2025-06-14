@@ -54,7 +54,7 @@ ellrach-academic-hub/
 ├── script.js      # JavaScript for floating buttons, popups, and interactivity
 └── README.md      # Project documentation and usage guide
 
-Here is your complete and properly formatted README.md file content, ready to use:
+
 
 
 ---
