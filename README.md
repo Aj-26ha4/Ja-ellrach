@@ -105,7 +105,6 @@ We are committed to making academic success achievable through a fast, confident
 
 # 📂 Project Structure
 
-```plaintext
 ellrach-academic-hub/
 ├── index.html     # Main website page (landing and services)
 ├── style.css      # Custom dark-themed styles (white-on-black)
