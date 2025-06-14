@@ -32,8 +32,8 @@ We are committed to making academic success achievable through a fast, confident
   - Each service includes its own secured payment process.
 
 - 📤 File Delivery via  
-  - ✅ Email: ellrachacademic@gmail.com  
-  - ✅ Messenger: m.me/ellrachhub
+  - ✅ Email: ajsogood@gmail.com  
+  - ✅ Messenger: m.me/
 
 ---
 
@@ -46,3 +46,36 @@ We are committed to making academic success achievable through a fast, confident
 ---
 
 ## 📂 File Structure
+
+/ellrach-academic-hub │ ├── index.html          # Main website page ├── style.css           # Dark-themed site styling ├── script.js           # Interaction and effects └── README.md           # This file
+
+---
+
+## 💡 How It Works
+
+1. Visit the website and explore available services.  
+2. Use the floating inquiry button to contact us.  
+3. Submit your request through the Google Form.  
+4. Follow payment instructions provided.  
+5. Receive your completed work via email or Messenger.
+
+---
+
+## 📞 Contact Us
+
+- **Email**: ellrachacademic@gmail.com  
+- **WhatsApp**: 0927-378-3271  
+- **Messenger**: m.me/ellrachhub  
+- **Facebook Page**: facebook.com/ellrachhub  
+- **Phone**: 0927-378-3271
+
+---
+
+## ✅ License
+
+This platform is intended for educational and academic assistance only. All client files and information are handled with confidentiality.  
+© 2025 Ellrach Academic Hub. All rights reserved.
+
+---
+
+> "Quality academic work, delivered directly to you — Ellrach Academic Hub"
