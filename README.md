@@ -1,16 +1,16 @@
-# # 📚 Ellrach Academic Hub
+# 📚 Ellrach Academic Hub
 
 **Ellrach Academic Hub** is an academic commission platform based in the Philippines that provides reliable, affordable, and high-quality academic assistance. We serve students, researchers, and professionals with personalized support for thesis writing, essays, research papers, and more — delivered securely via email and Messenger.
 
 ---
 
-## 🌟 About Us
+# 🌟 About Us
 
 We are committed to making academic success achievable through a fast, confidential, and professional approach. Whether it's for school, university, or professional growth, Ellrach Academic Hub is here to help you submit your best work.
 
 ---
 
-## 🛠 Key Features
+# 🛠 Key Features
 
 - 🎓 Academic Services  
   - Thesis and Capstone Writing  
@@ -37,7 +37,7 @@ We are committed to making academic success achievable through a fast, confident
 
 ---
 
-## 🚀 Deployment
+# 🚀 Deployment
 
 - Built with HTML, CSS, and JavaScript  
 - Developed using SPCK Editor (mobile-compatible)  
@@ -45,13 +45,18 @@ We are committed to making academic success achievable through a fast, confident
 
 ---
 
-## 📂 File Structure
+# 📂 Project Structure
 
-/ellrach-academic-hub │ ├── index.html          # Main website page ├── style.css           # Dark-themed site styling ├── script.js           # Interaction and effects └── README.md           # This file
+```plaintext
+ellrach-academic-hub/
+├── index.html     # Main website page (landing and services)
+├── style.css      # Custom dark-themed styles (white-on-black)
+├── script.js      # JavaScript for floating buttons, popups, and interactivity
+└── README.md      # Project documentation and usage guide
 
 ---
 
-## 💡 How It Works
+# 💡 How It Works
 
 1. Visit the website and explore available services.  
 2. Use the floating inquiry button to contact us.  
@@ -61,9 +66,9 @@ We are committed to making academic success achievable through a fast, confident
 
 ---
 
-## 📞 Contact Us
+# 📞 Contact Us
 
-- **Email**: ellrachacademic@gmail.com  
+- **Email**: ajsogood@gmail.com
 - **WhatsApp**: 0927-378-3271  
 - **Messenger**: m.me/ellrachhub  
 - **Facebook Page**: facebook.com/ellrachhub  
@@ -71,7 +76,7 @@ We are committed to making academic success achievable through a fast, confident
 
 ---
 
-## ✅ License
+# ✅ License
 
 This platform is intended for educational and academic assistance only. All client files and information are handled with confidentiality.  
 © 2025 Ellrach Academic Hub. All rights reserved.
