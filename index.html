@@ -3,84 +3,105 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ja Ellrach – Academic Work Services</title>
+  <title>Ellrach Academic Hub – Achieve with Confidence</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-color: #000;
-      --text-color: #fff;
-      --card-bg: #111;
-      --button-bg: #00f0ff;
-      --button-text: #000;
-      --card-shadow: rgba(0, 255, 255, 0.1);
-    }
-
-    .light-mode {
-      --bg-color: #fff;
-      --text-color: #000;
-      --card-bg: #f0f0f0;
+      --primary-color: #007acc;
+      --accent-color: #f0f8ff;
+      --text-color: #222;
+      --bg-color: #ffffff;
+      --card-bg: #f9f9f9;
       --button-bg: #007acc;
       --button-text: #fff;
-      --card-shadow: rgba(0, 0, 0, 0.1);
+      --shadow-color: rgba(0, 0, 0, 0.1);
     }
 
     body {
+      font-family: 'Poppins', sans-serif;
       margin: 0;
-      font-family: 'Times New Roman', serif;
-      background-color: var(--bg-color);
+      background: var(--bg-color);
       color: var(--text-color);
-      transition: background-color 0.3s, color 0.3s;
     }
 
-    header, footer {
+    header {
+      background: var(--accent-color);
       text-align: center;
-      padding: 2rem;
+      padding: 2rem 1rem;
     }
 
     header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
+      color: var(--primary-color);
+      margin: 0;
     }
 
-    header p {
-      opacity: 0.8;
-      font-style: italic;
+    .banner {
+      background: url('https://source.unsplash.com/1600x400/?study,books,education') no-repeat center center/cover;
+      height: 250px;
     }
 
     .container {
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
+      padding: 2rem;
     }
 
     .card {
       background: var(--card-bg);
       padding: 2rem;
       border-radius: 1rem;
-      box-shadow: 0 0 12px var(--card-shadow);
+      box-shadow: 0 4px 12px var(--shadow-color);
+      margin-bottom: 2rem;
     }
 
-    button, .mode-toggle {
+    button {
       background: var(--button-bg);
       color: var(--button-text);
       padding: 0.75rem 2rem;
       border: none;
       border-radius: 0.5rem;
       cursor: pointer;
+      font-weight: 600;
+    }
+
+    .services-list li {
+      cursor: pointer;
+      color: var(--primary-color);
+      text-decoration: underline;
+      margin-bottom: 0.5rem;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .modal-content {
+      background-color: white;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 1rem;
+      max-width: 600px;
+    }
+
+    .close {
+      float: right;
+      font-size: 1.5rem;
       font-weight: bold;
-      transition: opacity 0.3s;
+      cursor: pointer;
     }
 
-    button:hover, .mode-toggle:hover {
-      opacity: 0.9;
-    }
-
-    .mode-toggle {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: var(--accent-color);
     }
 
     .whatsapp-button {
@@ -89,67 +110,103 @@
       right: 20px;
       background-color: #25D366;
       color: white;
-      border: none;
       padding: 12px 20px;
       border-radius: 50px;
       text-decoration: none;
       font-weight: bold;
-    }
-
-    ul {
-      padding-left: 1.25rem;
-    }
-
-    li {
-      margin-bottom: 0.5rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     }
   </style>
 </head>
 <body>
-  <button class="mode-toggle" onclick="toggleMode()">Toggle Mode</button>
+
+  <div class="banner"></div>
 
   <header>
-    <h1>Ja Ellrach</h1>
+    <h1>Ellrach Academic Hub</h1>
     <p>“Your Partner in Achieving Academic Excellence.”</p>
   </header>
 
   <main class="container">
+
     <section class="card">
-      <h2>Request Academic Help</h2>
-      <p>Click the button below to fill out the Google Form for your request:</p>
+      <h2>Our Services</h2>
+      <ul class="services-list">
+        <li onclick="openModal('research')">Research Papers & Literature Reviews</li>
+        <li onclick="openModal('thesis')">Thesis Writing & Editing</li>
+        <li onclick="openModal('data')">Data Analysis</li>
+        <li onclick="openModal('assignments')">Essays, Assignments & More</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Submit Your Request</h2>
       <a href="https://docs.google.com/forms/d/e/1FAIpQLScDTboapS6CTY6gIbXBBhF4RRIuQV3l-o3fmSrwniI3BBHMEg/viewform?usp=sharing" target="_blank">
         <button>Submit a Request</button>
       </a>
     </section>
 
-    <section class="card">
-      <h2>Why Choose Ja Ellrach?</h2>
-      <ul>
-        <li>All types of academic work – research, thesis, assignments</li>
-        <li>Confidential and deadline-focused services</li>
-        <li>Open communication with progress updates</li>
-        <li>Flexible across all levels and subjects</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2>Secure Payments</h2>
-      <p>You will receive the payment details via email once your task has been confirmed. All transactions are secure, verified, and handled with complete confidentiality.</p>
-    </section>
   </main>
 
   <a href="https://wa.me/639273783271" class="whatsapp-button" target="_blank">Chat on WhatsApp</a>
 
   <footer>
-    &copy; <span id="year"></span> Ja Ellrach. All rights reserved.
+    &copy; <span id="year"></span> Ellrach Academic Hub. All rights reserved.
   </footer>
+
+  <!-- Modals -->
+  <div id="research" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('research')">&times;</span>
+      <h3>Research Papers & Literature Reviews</h3>
+      <p>We help you find credible, peer-reviewed sources and write cohesive, critical literature reviews with proper citation styles (APA, MLA, Chicago, etc.).</p>
+    </div>
+  </div>
+
+  <div id="thesis" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('thesis')">&times;</span>
+      <h3>Thesis Writing & Editing</h3>
+      <p>From proposal to final defense, we offer full or partial thesis writing, editing, formatting, and plagiarism checks.</p>
+    </div>
+  </div>
+
+  <div id="data" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('data')">&times;</span>
+      <h3>Data Analysis</h3>
+      <p>Statistical or thematic analysis using SPSS, Excel, or manual coding. Graphs, tables, and interpretations included.</p>
+    </div>
+  </div>
+
+  <div id="assignments" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('assignments')">&times;</span>
+      <h3>Essays, Assignments & More</h3>
+      <p>We cover short papers, reflection essays, lab reports, or case studies with high quality and fast turnaround.</p>
+    </div>
+  </div>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    function toggleMode() {
-      document.body.classList.toggle("light-mode");
+    function openModal(id) {
+      document.getElementById(id).style.display = "block";
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      const modals = document.querySelectorAll(".modal");
+      modals.forEach(modal => {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      });
     }
   </script>
+
 </body>
 </html>
