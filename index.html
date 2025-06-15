@@ -204,7 +204,7 @@
       <h2>Submit Your Request</h2>
      <form onsubmit="return validateAgreement()" target="_blank" action="https://docs.google.com/forms/d/e/1FAIpQLScDTboapS6CTY6gIbXBBhF4RRIuQV3l-o3fmSrwniI3BBHMEg/viewform">
       <input type="checkbox" id="agree" required>
-      <label for="agree">I agree to the <a href="#" class="no-underline" onclick="openModal('modalPolicy')">terms</a></label><br><br>
+      <label for="agree">I agree to the <a href="#" class="no-underline" onclick="event.preventDefault();openModal('modalPolicy')">terms</a></label><br><br>
      <button type="submit"><i class="fas fa-paper-plane"></i> Go to Request Form</button>
     </form>
   </section>
