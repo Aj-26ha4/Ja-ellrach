@@ -1,6 +1,6 @@
-# 📚 Ellrach Academic Hub
+# 📚 Ellrahc Academic Hub
 
-**Ellrach Academic Hub** is an academic commission platform based in the Philippines that provides reliable, affordable, and high-quality academic assistance. We serve students, researchers, and professionals with personalized support for thesis writing, essays, research papers, and more — delivered securely via email and Messenger.
+**Ellrahc Academic Hub** is an academic commission platform based in the Philippines that provides reliable, affordable, and high-quality academic assistance. We serve students, researchers, and professionals with personalized support for thesis writing, essays, research papers, and more — delivered securely via email and Messenger.
 
 ---
 
