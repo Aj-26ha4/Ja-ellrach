@@ -65,8 +65,8 @@ ellrach-academic-hub/ ├── index.html     # Main website page (landing and 
 
 - **Email**: ajsogood@gmail.com  
 - **WhatsApp**: 0927-378-3271  
-- **Messenger**: [m.me/ellrachhub](https://m.me/ellrachhub)  
-- **Facebook Page**: [facebook.com/ellrach](https://facebook.com/ellrach)  
+- **Messenger**: [m.me/ellrachacademichub](https://m.me/ellrachacademichub)  
+- **Facebook Page**: [facebook.com/ellrach](https://facebook.com/ellrachacademichub)  
 - **Phone**: 0927-378-3271
 
 ---
